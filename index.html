@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Popup Modal</title>
+</head>
+<body>
+
+    <button type="button" onclick="toggleModal()">Open Modal</button>
+    <div class="modal-background" onclick="toggleModal()"></div>
+    <div class="modal">
+        <h2>Modal Window</h2>
+        <p>Popup sistemini açmak istiyorsanız butona basmanız yeterlidir. Aksi takdirde başka yerlere basmayın!</p>
+    </div>
+
+    <script>
+        const toggleModal=() =>{
+            const bodyClasslist=document.body.classList;
+            if(bodyClasslist.contains("open")){
+                bodyClasslist.remove("open");
+                bodyClasslist.add("closed");
+
+            }else{
+                bodyClasslist.remove("closed");
+                bodyClasslist.add("open");
+
+            }
+
+        }
+    </script>
+</body>
+</html>
